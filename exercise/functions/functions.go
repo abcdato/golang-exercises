@@ -54,28 +54,4 @@ func main() {
 
 	num := returnAnyNum(5)
 	fmt.Println(num)
-
-	// currencies := map[string]int{
-	// 	"usd":  999,
-	// 	"rub":  0,
-	// 	"yuan": 10,
-	// }
-	// fmt.Println(currencies)
-	// fmt.Println(currencies["yuan"])
-
-	// usd := currencies["usd"]
-	// fmt.Println(usd)
-
-	// for key, value := range currencies { // Order not specified
-	// 	fmt.Println(key, value)
-	// }
-
-	// delete(currencies, "rub")
-	// fmt.Println(currencies)
-
-	// fmt.Println(len(currencies))
-
-	// m1 := make(map[string]float64)
-	// var m2 map[string]float64
-	// fmt.Println(m1, m2)
 }

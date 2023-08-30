@@ -39,7 +39,6 @@ const (
 
 func accessGranted() {
 	fmt.Println("Granted")
-	// println("Granted")
 }
 
 func accessDenied() {
@@ -49,10 +48,6 @@ func accessDenied() {
 func main() {
 	// The day and role. Change these to check your work.
 	today, role := Wednesday, Contractor
-
-	// for i := 1; i <= 10; i++ {
-	// 	fmt.Println(i)
-	// }
 
 	if role == Admin || role == Manager {
 		accessGranted()
