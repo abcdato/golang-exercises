@@ -52,23 +52,4 @@ func main() {
 			fmt.Println("Odd")
 		}
 	}
-
-	// dice1 := roll()
-	// dice2 := roll()
-
-	// totallRoll := dice1 + dice2
-
-	// if dice1 == 1 && dice2 == 1 {
-	// 	fmt.Println("Snake eyes")
-	// } else if totallRoll == 7 {
-	// 	fmt.Println("Lucky 7")
-	// } else if totallRoll%2 == 0 {
-	// 	fmt.Println("Even")
-	// } else if totallRoll%2 != 0 {
-	// 	fmt.Println("Odd")
-	// // }
-
-	// fmt.Println(dice1)
-	// fmt.Println(dice2)
-	// fmt.Println("Dice sum is", dice1+dice2)
 }
