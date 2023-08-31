@@ -27,9 +27,8 @@ type ShoppingList struct {
 func totalNum(list [4]ShoppingList) int {
 	total := 0
 	for i := 0; i < len(list); i++ {
-		total += 1
-		if list[i].name == "" {
-			total -= 1
+		if list[i].name != "" {
+			total += 1
 		}
 	}
 	return total
