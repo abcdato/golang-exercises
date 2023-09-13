@@ -57,7 +57,8 @@ func main() {
 	servers := []string{"darkstar", "aiur", "omicron", "w359", "baseline"}
 
 	//* Store the existing slice of servers in a map
-	serversMap := make(map[string]int)
+	// serversMap := make(map[string]int)
+	var serversMap map[string]int
 
 	//* Default all of the servers to `Online`
 	for _, server := range servers {
