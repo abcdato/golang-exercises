@@ -18,21 +18,37 @@ import "fmt"
 
 type Player struct {
 	name              string
-	health, maxHealth int
-	energy, maxEnergy int
+	health, maxHealth uint
+	energy, maxEnergy uint
 }
 
-func (p *Player) modifyHealth(num int) {
+func (p *Player) addHealth(num uint) {
 	p.health += num
 	if p.health >= p.maxHealth {
 		p.health = p.maxHealth
 	}
 }
 
-func (p *Player) modifyEnergy(num int) {
+func (p *Player) damagePlayer(amount uint) {
+	if p.health-amount > p.health {
+		p.health = 0
+	} else {
+		p.health -= amount
+	}
+}
+
+func (p *Player) modifyEnergy(num uint) {
 	p.energy += num
 	if p.energy >= p.maxEnergy {
 		p.energy = p.maxEnergy
+	}
+}
+
+func (p *Player) consumeEnergy(amount uint) {
+	if p.energy-amount > p.energy {
+		p.energy = 0
+	} else {
+		p.energy -= amount
 	}
 }
 
@@ -46,12 +62,15 @@ func main() {
 	}
 	fmt.Println(p)
 
-	p.modifyHealth(10)
+	p.addHealth(10)
 	fmt.Printf("Player health: %v\nPLayer Max Health: %v\n", p.health, p.maxHealth)
 
-	p.modifyHealth(30)
+	p.damagePlayer(20)
 	fmt.Printf("Player health: %v\nPLayer Max Health: %v\n", p.health, p.maxHealth)
 
-	p.modifyEnergy(-30)
+	p.modifyEnergy(5)
+	fmt.Printf("Player energy: %v\nPLayer Max Energy: %v\n", p.energy, p.maxEnergy)
+
+	p.consumeEnergy(30)
 	fmt.Printf("Player energy: %v\nPLayer Max Energy: %v\n", p.energy, p.maxEnergy)
 }
