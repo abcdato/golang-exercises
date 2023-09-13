@@ -19,8 +19,38 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
+
+type Title string
+type Name string
+
+type LendAudit struct {
+	checkOut time.Time
+	checkIn  time.Time
+}
+
+type Member struct {
+	name  Name
+	books map[Title]LendAudit
+}
+
+type BookEntry struct {
+	total  int
+	lended int
+}
+
+type Librayr struct {
+	members map[Name]Member
+	book    map[Title]BookEntry
+}
 
 func main() {
+	m := map[int]string{
+		1: "one",
+	}
+	fmt.Println(m)
 
 }
