@@ -16,6 +16,13 @@ package main
 
 import "fmt"
 
+const (
+	add = iota
+	Subtract
+	mul
+	div
+)
+
 func main() {
 	fmt.Println(add.calculate(2, 2)) // = 4
 
