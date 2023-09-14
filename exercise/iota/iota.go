@@ -18,7 +18,7 @@ import "fmt"
 
 const (
 	add = iota
-	Subtract
+	sub
 	mul
 	div
 )
@@ -31,4 +31,5 @@ func main() {
 	fmt.Println(mul.calculate(3, 3)) // = 9
 
 	fmt.Println(div.calculate(100, 2)) // = 50
+
 }
