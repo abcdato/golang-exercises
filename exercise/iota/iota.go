@@ -16,6 +16,13 @@ package main
 
 import "fmt"
 
+const (
+	add = iota
+	sub
+	mul
+	div
+)
+
 func main() {
 	fmt.Println(add.calculate(2, 2)) // = 4
 
@@ -24,4 +31,5 @@ func main() {
 	fmt.Println(mul.calculate(3, 3)) // = 9
 
 	fmt.Println(div.calculate(100, 2)) // = 50
+
 }
