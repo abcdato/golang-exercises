@@ -51,5 +51,4 @@ func main() {
 
 	div := Operation(Divide)
 	fmt.Println(div.calculate(100, 2)) // = 50
-
 }
